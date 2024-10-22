@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        //Declaración de las variables
+        let n1 = Number(prompt("Introduzca el primer número"));
+        let n2 = Number(prompt("Introduzca el segundo número"));
+        let v1, v2;
+        //Comparación de variables para saber cual es mayor y asignar siempre el menor a v2
+        if (n1 == n2) {
+            console.log("Has introducido dos veces el mismo número");
+        } else {
+            if (n1 > n2) {
+                v1 = n1;
+                v2 = n2;
+            } else {
+                v1 = n2;
+                v2 = n1;
+            }
+            /*
+            //Bucle for que pregunta número por número si es par o impar e imprime solo los impares
+            for (let i = v2; i <= v1; i++) {
+                if (i % 2 == 1) {
+                    console.log("El número " + i + " es impar");
+                }
+            }
+            */
+            ///*
+            //Condicional que comprueba si el primer número es par y si es el caso le suma 1 a su valor
+            if (v2%2 == 0){
+                v2++;
+            }
+            //Bucle for que va sumando de 2 en 2 al valor i que toma el valor de v2 que ahora si o si es impar.
+            for (let i = v2; i <= v1; i += 2){
+                console.log("El número " + i + " es impar")
+            }
+            //*/
+        }
+    </script>
+</body>
+</html>

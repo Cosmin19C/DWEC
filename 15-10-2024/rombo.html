@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rombo</title>
+</head>
+<body>
+    <div id="lienzo">
+        <script>
+            let lienzo = document.getElementById("lienzo");
+            let numeroLineas = Number(prompt("Introduce el número de líneas"));
+            //Parte superior
+            for (let fila = 1; fila <= numeroLineas; fila++){
+                let asteriscos = "";
+                let espacios = "";
+                for (let espacio = 0; espacio < numeroLineas - fila; espacio++){
+                    espacios += "&nbsp;&nbsp;";
+                }
+                for (let asterisco = 0; asterisco < 2 * fila - 1; asterisco++){
+                    asteriscos += "*";
+                }
+                lienzo.innerHTML += espacios + asteriscos + "<br>";
+            }
+             // Parte inferior
+            for (let fila = numeroLineas - 1; fila >= 1; fila--) {
+                let asteriscos = "";
+                let espacios = "";
+                for (let espacio = 0; espacio < numeroLineas - fila; espacio++) {
+                espacios += "&nbsp;&nbsp;";
+                }
+                for (let asterisco = 0; asterisco < 2 * fila - 1; asterisco++) {
+                asteriscos += "*";
+                }
+                lienzo.innerHTML += espacios + asteriscos + "<br>";
+            }
+
+        </script>
+    </div>
+</body>
+</html>

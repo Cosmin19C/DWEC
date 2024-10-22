@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = Number(prompt("Introduce el primer número"));
+        var num2 = Number(prompt("Introduce el segundo número"));
+
+            function Impares (num1, num2) {
+                document.write("Números introducidos: " +num1 + " y " +num2+ "<br>");
+                if (num1 === num2) {
+                    console.log("Fin del programa");
+                    document.write("<br>Fin del programa");
+                } else if ( num1 != num2) {
+                    console.log("Calcularemos los impares de cada número.");
+                    if (num1 > num2) {
+                        var min = num1;
+                        var max = num2;
+                    }else{
+                        min = num2;
+                        max = num1;
+                    }
+                    if (min%2 == 0){
+                        min++;
+                    }
+                    for (i = min; i < max; i+=2){
+                        console.log("El número" + i + "es impar");
+                    }
+
+                } 
+            }
+            Impares (num1, num2)
+    </script>
+</body>
+</html>

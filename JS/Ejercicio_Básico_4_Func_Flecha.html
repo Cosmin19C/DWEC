@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        // Función flecha que procesa los números
+        let procesarNumeros = (numero1, numero2) => {
+            let auxNumero1, auxNumero2;
+
+            // Comparación de variables para determinar el mayor y menor
+            if (numero1 == numero2) {
+                console.log("Has introducido dos veces el mismo número");
+            } else {
+                if (numero1 > numero2) {
+                    auxNumero1 = numero1;
+                    auxNumero2 = numero2;
+                } else {
+                    auxNumero1 = numero2;
+                    auxNumero2 = numero1;
+                }
+
+                // Si el primer número es par, incrementar para que sea impar
+                if (auxNumero2 % 2 == 0) {
+                    auxNumero2++;
+                }
+
+                // Bucle que imprime los números impares desde auxNumero2 hasta auxNumero1
+                for (let i = auxNumero2; i <= auxNumero1; i += 2) {
+                    console.log("El número " + i + " es impar");
+                }
+            }
+        };
+
+        // Declaración de los números solicitados al usuario y ejecución de la función
+        let numero1 = Number(prompt("Introduzca el primer número"));
+        let numero2 = Number(prompt("Introduzca el segundo número"));
+        procesarNumeros(numero1, numero2);
+
+    </script>
+</body>
+</html>

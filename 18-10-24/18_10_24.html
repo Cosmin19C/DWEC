@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let daw = "Desarrollo de aplicaciones web";
+        let dam = 'Desarrollo de aplicaciones multiplataforma';
+        let asir = "Administración de 'Sistemas informáticos' en red";//Tambien al revés
+        let smr = "Sistemas \"Microinformáticos\" y Redes";//Pintar comillas en un texto
+        let ciclos = new String(""); //no recomendable ??
+
+        ciclos  =   "En este Instituto hay dos ciclos de Grado superior: " + "\n" +
+                    daw + "\n" +
+                    dam +  "\n" +
+                    "y un ciclo de Grado medio: " + "\n" +
+                    smr;
+        
+        alert(ciclos);
+
+        let Ciclos = new String("");
+
+        Ciclos  =   `En este Instituto hay dos ciclos de Grado superior: 
+                    ${daw}
+                    ${dam}
+                    y un ciclo de Grado medio: 
+                    ${smr}`;
+        alert(Ciclos);
+
+        alert(ciclos.charAt(16));
+
+        //Si el carácter 16 de la primnera línea de la cadena ciclos es mayor que el carácter 3 del string asir: Imprimir "Eureka"
+        if(ciclos.charAt(16) > asir.charAt(3)){
+            alert("Eureka");
+        }
+
+        //En que lugar aparece por primera vez la o en la cadena ciclos
+        alert(ciclos.indexOf("o"));
+        alert(asir.indexOf("o"));
+        
+    </script>
+</body>
+</html>

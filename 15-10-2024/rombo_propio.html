@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numLineas = Number(prompt("Introduce el número de asteriscos"));
+        let asteriscos = "*";
+        
+        for (let linea = 0; linea < numLineas; linea++) {
+            let espacios = ""; // Inicializar la variable espacios
+            for (let espacio = 0; espacio < numLineas - linea - 1; espacio++) {
+                espacios += "&nbsp;&nbsp;"; // Agregar espacios
+            }
+            document.write(espacios + asteriscos + "<br>");
+            asteriscos += "**"; // Incrementar asteriscos
+        }
+        for (let linea = 0; linea < numLineas - 1; linea++) {
+            let espacios = ""; // Inicializar la variable espacios
+            
+            for (let espacio = 0; espacio < linea + 1; espacio++) {
+                document.write(espacios + asteriscos + "<br>");
+                espacios += "&nbsp;&nbsp;"; // Agregar espacios
+                
+                asteriscos -="**"; // Decrementar asteriscos
+            }
+            
+        }
+    </script>
+</body>
+</html>
